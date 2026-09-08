@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ThankYouPageProps {
   name?: string;
   onBackToHome: () => void;

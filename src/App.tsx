@@ -3,8 +3,8 @@ import React, {
   useRef,
   useState,
   useCallback,
-  FormEvent,
-  ChangeEvent,
+  type FormEvent,
+  type ChangeEvent,
 } from 'react';
 
 const BOOKING_API_ENDPOINT: string =
