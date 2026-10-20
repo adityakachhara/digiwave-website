@@ -1,0 +1,137 @@
+*/ body {
+    margin: 0;
+    padding: 0;
+    color: #E6E6E8;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+
+    /* Pure Obsidian Base */
+    background-color: #07080a !important;
+
+    /* Luxury Subtle Gold/Zinc Dot Matrix Texture */
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.05) 0%, transparent 60%),
+        radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px;
+    background-position: center top, 0 0;
+    background-attachment: fixed;
+}
+
+header {
+    zoom: 1 !important;
+    transform: none !important;
+    scale: 1 !important;
+
+    background-color: rgba(11, 12, 14, 0.95) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+footer {
+    background-color: #07080a !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+@keyframes avelorSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-icon {
+    display: inline-block !important;
+    width: 18px !important;
+    height: 18px !important;
+    animation: avelorSpin 0.75s linear infinite !important;
+    vertical-align: middle !important;
+}
+
+/* Button loading state */
+.btn-is-loading {
+    opacity: 0.8 !important;
+    pointer-events: none !important;
+    cursor: wait !important;
+}
+
+/* Card container backgrounds */
+.bg-brand-card {
+    background-color: #0d0e12 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Input backgrounds */
+.bg-brand-inputBg {
+    background-color: #08090c !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Luxury Gold Gradients & Glows */
+.gold-gradient-text {
+    background: linear-gradient(135deg, #FFF0B8 0%, #D4AF37 50%, #9A7B20 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.08);
+}
+
+/* Category Selection Card Active State */
+.category-btn.active {
+    border-color: #D4AF37 !important;
+    background: rgba(212, 175, 55, 0.12) !important;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.category-btn.active h4 {
+    color: #F8E7A2 !important;
+}
+
+/* Multi-select Buttons (Soaps & Scrubs) */
+.multi-soap-btn.active,
+.multi-scrub-btn.active {
+    border-color: #D4AF37 !important;
+    background: rgba(212, 175, 55, 0.14) !important;
+    color: #FFFFFF !important;
+}
+
+/* Diagnostic Radio Pills */
+.radio-pill.active {
+    border-color: #D4AF37 !important;
+    background: rgba(212, 175, 55, 0.15) !important;
+    color: #F8E7A2 !important;
+}
+
+/* 1-5 Star/Number Rating Buttons */
+.rating-num-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0F1014;
+    color: #A1A1AA;
+    transition: all 0.2s ease;
+}
+
+.rating-num-btn:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    color: #FFFFFF;
+}
+
+.rating-num-btn.active {
+    border-color: #D4AF37 !important;
+    background-color: #D4AF37 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}

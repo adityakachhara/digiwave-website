@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="hqoegi8xkhl6mntcnfzptpq4gk29lg" />
+  <title>Avelor Luxe — Product Testing Application</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0C0E'/%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23D4AF37' stroke-width='1.5' stroke-opacity='0.4'/%3E%3Ctext x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia, serif' font-size='32' font-weight='bold' fill='%23D4AF37'%3E%C3%81%3C/text%3E%3C/svg%3E" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1508559431300108');
+    fbq('track', 'PageView');
+      fbq('track', 'SubmitApplication');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1508559431300108&ev=PageView&noscript=1" />
+    </noscript>
+  <!-- End Meta Pixel Code -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: "#D4AF37",
+              goldLight: "#F3E5AB",
+              goldDark: "#997D24",
+              obsidian: "#0B0C0E",
+              card: "#131418",
+              cardBorder: "#23252B",
+              cardHover: "#1A1C22",
+              inputBg: "#0F1014",
+            },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', "serif"],
+            sans: ['"Montserrat"', "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background-color: #07080a;
+      color: #e6e6e8;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg,
+          #fff0b8 0%,
+          #d4af37 50%,
+          #9a7b20 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.08);
+    }
+
+    .option-btn.active {
+      border-color: #d4af37 !important;
+      background: rgba(212, 175, 55, 0.12) !important;
+      color: #f8e7a2 !important;
+    }
+
+    .checkbox-btn.active {
+      border-color: #d4af37 !important;
+      background: rgba(212, 175, 55, 0.1) !important;
+      color: #fff !important;
+    }
+  </style>
+  <!-- JAVASCRIPT DEFINED IN HEAD SO ONCLICK HANDLERS NEVER MISS REFERENCE -->
+</head>
+
+<body
+    class="min-h-screen flex flex-col justify-between selection:bg-[#D4AF37] selection:text-black bg-[#07080a] text-zinc-100"
+    style="
+      background-image:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(212, 175, 55, 0.06) 0%,
+          transparent 50%
+        ),
+        radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-size:
+        100% 100%,
+        24px 24px;
+      background-attachment: fixed;
+    "
+  >
+<header class="w-full min-h-[86px] border-b border-white/5 bg-[#0B0C0E]/95 backdrop-blur-md sticky top-0 z-50 py-3 px-4 sm:px-6 md:px-12 flex items-center justify-between gap-3 transition-all duration-300">  <!-- Brand Logo & Title -->
+  <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3.5 shrink-0 group">
+    <!-- Circular Gold Frame for Logo -->
+    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D4AF37]/50 p-0.5 flex items-center justify-center bg-black/60 shadow-[0_0_12px_rgba(212,175,55,0.15)] group-hover:border-[#D4AF37] transition-colors overflow-hidden">
+      <img 
+        src="./images/logo.jpeg" 
+        alt="Avelor Luxe Logo" 
+        class="w-full h-full object-cover rounded-full"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <!-- Fallback Monogram if image is loading or missing -->
+      <span class="hidden font-serif text-[#D4AF37] font-bold text-sm sm:text-base items-center justify-center w-full h-full">A</span>
+    </div>
+
+    <!-- Brand Typography (Title on mobile, subtitle on tablet+) -->
+    <div class="flex flex-col">
+      <h1 class="font-serif tracking-[0.2em] sm:tracking-[0.25em] text-sm sm:text-md md:text-base font-semibold text-white group-hover:text-[#F3E5AB] transition-colors leading-tight">
+        AVELOR LUXE
+      </h1>
+      <p class="hidden sm:block text-[10px] sm:text-[11px] tracking-[0.25em] sm:tracking-[0.3em] uppercase text-zinc-400 mt-0.5 font-sans">
+        Science • Nature • Transformation
+      </p>
+    </div>
+  </a>
+
+  <!-- Navigation Tabs (Visible on BOTH Mobile & Desktop) -->
+<nav class="order-3 w-full flex items-center justify-center space-x-6 text-[11px] sm:text-xs uppercase tracking-wider font-medium sm:order-none sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:w-auto sm:justify-center sm:space-x-6">    <a 
+      href="index.html" 
+      class="text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 whitespace-nowrap transition-colors"
+    >
+      Tester Application
+    </a>
+
+    <!-- Link to Feedback -->
+    <a 
+      href="feedback.html" 
+      class="text-zinc-400 hover:text-white border-b-2 border-transparent hover:border-zinc-500 pb-1 whitespace-nowrap transition-colors"
+    >
+      Tester Feedback
+    </a>
+  </nav>
+
+  <!-- Live Status Badge (Compact on mobile) -->
+  <div class="flex items-center space-x-1.5 px-2.5 sm:px-3.5 py-1 rounded-full border border-emerald-500/25 bg-emerald-950/25 text-emerald-400 text-[10px] sm:text-xs font-medium shrink-0">
+    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span class="hidden sm:inline">Tester Panel Open</span>
+    <span class="sm:hidden">Active</span>
+  </div>
+
+</header>
+  <!-- MAIN CONTAINER -->
+<main class="flex-grow max-w-5xl w-full mx-auto px-8 py-6 md:py-10">
+      <!-- HERO INTRO BANNER -->
+    <img src="./images/banner.jpeg" alt="Avelor Luxe Luxury Skincare"
+      class="w-full h-48 md:h-64 object-cover rounded-2xl mb-6 border border-[#23252B]" />
+    <div
+      class="relative overflow-hidden rounded-2xl border border-brand-cardBorder bg-brand-card p-6 md:p-10 mb-8 gold-border-glow">
+      <div class="relative z-10">
+        <div
+          class="inline-block px-3 py-1 rounded-full text-[10px] tracking-[0.2em] uppercase font-semibold text-brand-gold border border-brand-gold/30 bg-brand-gold/10 mb-4">
+          Exclusive Pre-Launch
+        </div>
+        <h2 class="font-serif text-2xl md:text-4xl text-white font-medium mb-3">
+          Avelor Luxe — Product Testing Application
+        </h2>
+        <p class="text-zinc-300 text-sm md:text-base leading-relaxed mb-6">
+          We’re inviting a limited number of individuals to experience an
+          unreleased
+          <strong class="text-white font-medium">Avelor Luxe</strong>
+          body-care formulation before public launch. Please share your actual
+          habits and preferences below.
+        </p>
+        <div
+          class="pt-4 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-zinc-400 gap-2">
+          <div class="flex items-center space-x-2">
+            <span>⏱ Takes approx. 2–3 minutes</span>
+          </div>
+          <span class="italic text-[11px] text-zinc-400">Submitting does not guarantee selection. Selected testers
+            receive
+            complimentary products.</span>
+        </div>
+      </div>
+    </div>
+    <!-- PROGRESS BAR & STEP NAVIGATION -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between text-xs mb-2">
+        <span id="stepLabel" class="text-brand-gold font-medium uppercase tracking-wider text-[11px]">Section 1 of 5:
+          About You</span>
+        <span id="stepPercent" class="text-zinc-400 font-medium">20% Completed</span>
+      </div>
+      <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden mb-5">
+        <div id="progressBar"
+          class="h-full bg-gradient-to-r from-brand-goldDark to-brand-gold transition-all duration-300 w-1/5"></div>
+      </div>
+      <div class="grid grid-cols-5 gap-1.5 text-center text-[10px] md:text-xs">
+        <button type="button" onclick="goToStep(1)"
+          class="step-nav py-2 rounded-lg border border-brand-gold/40 text-brand-gold bg-brand-gold/10 font-medium transition-all"
+          data-step="1">
+          1. About
+        </button>
+        <button type="button" onclick="goToStep(2)"
+          class="step-nav py-2 rounded-lg border border-white/5 text-zinc-400 bg-brand-card hover:text-white transition-all"
+          data-step="2">
+          2. Habits
+        </button>
+        <button type="button" onclick="goToStep(3)"
+          class="step-nav py-2 rounded-lg border border-white/5 text-zinc-400 bg-brand-card hover:text-white transition-all"
+          data-step="3">
+          3. Skin
+        </button>
+        <button type="button" onclick="goToStep(4)"
+          class="step-nav py-2 rounded-lg border border-white/5 text-zinc-400 bg-brand-card hover:text-white transition-all"
+          data-step="4">
+          4. Testing
+        </button>
+        <button type="button" onclick="goToStep(5)"
+          class="step-nav py-2 rounded-lg border border-white/5 text-zinc-400 bg-brand-card hover:text-white transition-all"
+          data-step="5">
+          5. Contact
+        </button>
+      </div>
+    </div>
+    <!-- MULTI-STEP FORM -->
+    <form id="testerForm" onsubmit="event.preventDefault()" class="space-y-6">
+      <!-- ================= SECTION 1: ABOUT YOU ================= -->
+      <section id="section-1" class="form-section space-y-6">
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-1">1. What is your age group?
+            <span class="text-brand-gold">*</span></label>
+          <p class="text-xs text-zinc-400 mb-4">
+            Required for tester group balancing
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('age', '18–24', this)">
+              18–24
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all active"
+              onclick="selectSingle('age', '25–30', this)">
+              25–30
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('age', '31–40', this)">
+              31–40
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('age', '41+', this)">
+              41+
+            </button>
+          </div>
+          <input type="hidden" id="input_age" value="25–30" />
+        </div>
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label for="input_city" class="block text-sm font-medium text-white mb-1">2. Which city do you currently live
+            in?
+            <span class="text-brand-gold">*</span></label>
+          <p class="text-xs text-zinc-400 mb-4">
+            Helps us coordinate regional shipping logistics
+          </p>
+          <input type="text" id="input_city" placeholder="e.g. Delhi, Mumbai, Banglore..."
+            class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-400 transition-all" />
+        </div>
+      </section>
+      <!-- ================= SECTION 2: HABITS ================= -->
+      <section id="section-2" class="form-section hidden space-y-6">
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-1">3. How often do you use body-care products (lotions,
+            oils,
+            polishes)? <span class="text-brand-gold">*</span></label>
+          <p class="text-xs text-zinc-400 mb-4">
+            Select your typical frequency
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="
+                  selectSingle('frequency', 'Daily (1–2 times/day)', this)
+                ">
+              Daily (1–2 times/day)
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('frequency', '3–5 times a week', this)">
+              3–5 times a week
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('frequency', '1–2 times a week', this)">
+              1–2 times a week
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="
+                  selectSingle('frequency', 'Occasionally / As needed', this)
+                ">
+              Occasionally / As needed
+            </button>
+          </div>
+          <input type="hidden" id="input_frequency" value="Daily (1–2 times/day)" />
+        </div>
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-1">4. Which body-care products are currently part of
+            your routine?
+            <span class="text-brand-gold">*</span></label>
+          <p class="text-xs text-zinc-400 mb-4">Select all that apply</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="
+                  toggleMulti('products', 'Body Moisturizer / Lotion', this)
+                ">
+              ✓ Body Moisturizer / Lotion
+            </button>
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="toggleMulti('products', 'Body Polish / Scrub', this)">
+              ✓ Body Polish / Scrub
+            </button>
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="toggleMulti('products', 'Body Oil / Elixir', this)">
+              Body Oil / Elixir
+            </button>
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="
+                  toggleMulti('products', 'Exfoliating Wash / Gel', this)
+                ">
+              Exfoliating Wash / Gel
+            </button>
+          </div>
+          <input type="hidden" id="input_products" value="Body Moisturizer / Lotion, Body Polish / Scrub" />
+        </div>
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-1">5. Typical monthly spend on premium personal
+            care</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('spend', 'Under ₹250', this)">
+              Under ₹250
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all active"
+              onclick="selectSingle('spend', '₹250 – ₹500', this)">
+              ₹250 – ₹500
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('spend', '₹500 – ₹1000', this)">
+              ₹500 – ₹1000
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('spend', '₹1000+', this)">
+              ₹1000+
+            </button>
+          </div>
+          <input type="hidden" id="input_spend" value="₹250 – ₹500" />
+        </div>
+      </section>
+      <!-- ================= SECTION 3: SKIN & PREFERENCES ================= -->
+      <section id="section-3" class="form-section hidden space-y-6">
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-1">6. How would you describe your body skin type?
+            <span class="text-brand-gold">*</span></label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('interest', 'Dry / Dehydrated', this)">
+              Dry / Dehydrated
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="selectSingle('interest', 'Normal / Balanced', this)">
+              Normal / Balanced
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="selectSingle('interest', 'Sensitive / Reactive', this)">
+              Sensitive / Reactive
+            </button>
+            <button type="button"
+              class="option-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all"
+              onclick="
+                  selectSingle(
+                    'interest',
+                    'Uneven Texture / Keratosis Pilaris',
+                    this,
+                  )
+                ">
+              Uneven Texture / Roughness
+            </button>
+          </div>
+          <input type="hidden" id="input_interest" value="Normal / Balanced" />
+        </div>
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-1">7. What matters most to you in a luxury body
+            formulation?
+            <span class="text-brand-gold">*</span></label>
+          <p class="text-xs text-zinc-400 mb-3">Select up to two</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="
+                  toggleMulti(
+                    'matters',
+                    'Deep Nourishment without Stickiness',
+                    this,
+                  )
+                ">
+              ✓ Deep Nourishment without Stickiness
+            </button>
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="
+                  toggleMulti(
+                    'matters',
+                    'Sophisticated Long-lasting Fragrance',
+                    this,
+                  )
+                ">
+              ✓ Sophisticated Long-lasting Fragrance
+            </button>
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="
+                  toggleMulti(
+                    'matters',
+                    'Immediate Glow & Velvet Softness',
+                    this,
+                  )
+                ">
+              Immediate Glow & Velvet Softness
+            </button>
+            <button type="button"
+              class="checkbox-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-inputBg text-sm text-left hover:border-brand-gold/50 transition-all active"
+              onclick="
+                  toggleMulti('matters', 'Clean Active Botanical Science', this)
+                ">
+              Clean Active Botanical Science
+            </button>
+          </div>
+          <input type="hidden" id="input_matters"
+            value="Deep Nourishment without Stickiness, Sophisticated Long-lasting Fragrance" />
+        </div>
+      </section>
+      <!-- ================= SECTION 4: TESTING CRITERIA ================= -->
+      <section id="section-4" class="form-section hidden space-y-6">
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label class="block text-sm font-medium text-white mb-2">8. Tester Agreement & Honesty Policy
+            <span class="text-brand-gold">*</span></label>
+          <div class="space-y-3">
+            <label class="flex items-start space-x-3 text-xs md:text-sm text-zinc-300 cursor-pointer">
+              <input type="checkbox" id="chk_instructions" checked class="mt-1 accent-brand-gold rounded" />
+              <span>I agree to use the unreleased formula consistently for 14
+                days as instructed.</span>
+            </label>
+            <label class="flex items-start space-x-3 text-xs md:text-sm text-zinc-300 cursor-pointer">
+              <input type="checkbox" id="chk_feedback" checked class="mt-1 accent-brand-gold rounded" />
+              <span>I agree to complete a brief 5-minute honest evaluation after
+                14 days of testing.</span>
+            </label>
+            <label class="flex items-start space-x-3 text-xs md:text-sm text-zinc-300 cursor-pointer">
+              <input type="checkbox" id="chk_confidential" checked class="mt-1 accent-brand-gold rounded" />
+              <span>I understand that this is a confidential pre-launch trial
+                formulation.</span>
+            </label>
+          </div>
+        </div>
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6">
+          <label for="input_why" class="block text-sm font-medium text-white mb-1">9. Why would you be an ideal tester
+            for Avelor Luxe?</label>
+          <textarea id="input_why" rows="3"
+            placeholder="Tell us a little about your personal standards for body care..."
+            class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-4 text-sm text-white placeholder-zinc-400 transition-all"></textarea>
+        </div>
+      </section>
+      <!-- ================= SECTION 5: CONTACT & SUBMIT ================= -->
+      <section id="section-5" class="form-section hidden space-y-6">
+        <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 space-y-4">
+          <div>
+            <label for="input_fullName" class="block text-sm font-medium text-white mb-1">Full Name <span
+                class="text-brand-gold">*</span></label>
+            <input type="text" id="input_fullName" required placeholder="Your full name"
+              class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-400 transition-all" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="input_email" class="block text-sm font-medium text-white mb-1">Email Address <span
+                  class="text-brand-gold">*</span></label>
+              <input type="email" id="input_email" required placeholder="name@example.com"
+                class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-400 transition-all" />
+            </div>
+            <div>
+              <label for="input_phone" class="block text-sm font-medium text-white mb-1">Phone / WhatsApp
+                <span class="text-brand-gold">*</span></label>
+              <input type="tel" id="input_phone" required placeholder="+91 777 888 9999"
+                class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-400 transition-all" />
+            </div>
+          </div>
+          <div>
+            <label for="input_instagram" class="block text-sm font-medium text-white mb-1">Instagram Handle
+              <span class="text-brand-gold">*</span></label>
+            <input type="text" id="input_instagram" required placeholder="@yourhandle"
+              class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-400 transition-all" />
+          </div>
+          <div class="pt-2">
+            <label class="flex items-center space-x-3 text-xs text-zinc-300 cursor-pointer">
+              <input type="checkbox" id="chk_consent" checked class="accent-brand-gold rounded" />
+              <span>I consent to be contacted via email/WhatsApp regarding tester
+                selection and dispatch instructions.</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <p id="formError" style="display:none" class="text-sm text-red-400 bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3"></p>      <!-- NAVIGATION BUTTONS -->
+      <div class="flex items-center justify-between pt-4">
+        <button type="button" id="prevBtn" onclick="prevStep()"
+          class="hidden px-6 py-3 rounded-xl border border-white/10 bg-brand-card hover:bg-brand-cardHover text-sm font-medium text-zinc-300 transition-all">
+          ← Previous
+        </button>
+        <div class="flex-grow"></div>
+        <button type="button" id="nextBtn" onclick="nextStep()"
+          class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-semibold text-sm shadow-lg shadow-brand-gold/10 hover:opacity-95 transition-all">
+          Continue →
+        </button>
+        <button type="button" id="submitBtn" onclick="submitApplication()"
+          class="hidden px-10 py-3.5 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-semibold text-sm shadow-lg shadow-brand-gold/20 hover:opacity-95 transition-all flex items-center space-x-2">
+          Submit Application
+        </button>
+      </div>
+    </form>
+    <!-- SUCCESS CONFIRMATION MODAL/CARD -->
+    <div id="confirmationCard"
+      class="hidden overflow-hidden rounded-2xl border border-brand-gold/30 bg-brand-card p-8 md:p-12 text-center gold-border-glow">
+      <div
+        class="w-16 h-16 rounded-full bg-brand-gold/10 border border-brand-gold/40 flex items-center justify-center mx-auto mb-6">
+        <span class="text-2xl text-brand-gold font-bold">✓</span>
+      </div>
+      <span class="text-[10px] tracking-[0.25em] uppercase font-semibold text-brand-gold">Application Successfully
+        Received</span>
+      <h3 class="font-serif text-2xl md:text-3xl text-white font-medium mt-2 mb-4">
+        Thank You,
+        <span id="confName" class="gold-gradient-text">Applicant</span>
+      </h3>
+      <p class="text-zinc-300 text-sm max-w-lg mx-auto leading-relaxed mb-6">
+        Your application for the exclusive
+        <strong class="text-white">Avelor Luxe</strong> experience trial has
+        been logged directly into our master reviewer roster.
+      </p>
+      <div
+        class="inline-block px-5 py-2.5 rounded-xl border border-brand-cardBorder bg-black/40 text-xs font-mono text-zinc-400 mb-8">
+        Reference ID:
+        <span id="refCode" class="text-brand-gold font-bold">#AVL-</span>
+      </div>
+        <div class="max-w-md mx-auto -mt-4 mb-8 rounded-xl border border-brand-gold/40 bg-brand-gold/10 px-4 py-3">
+        <p class="text-sm font-semibold text-brand-gold">⚠ Save this Reference ID for future use</p>
+        <p class="text-xs text-zinc-300 mt-1">Take a screenshot or copy it now. You will need it to follow up on your application.</p>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left max-w-xl mx-auto border-t border-white/5 pt-6 text-xs text-zinc-400">
+        <div>
+          <span class="block text-white font-medium mb-1">1. Review</span>
+          <span>Our formulation team evaluates tester profiles over 48
+            hours.</span>
+        </div>
+        <div>
+          <span class="block text-white font-medium mb-1">2. Notification</span>
+          <span>Selected candidates receive shipping confirmation via
+            WhatsApp/Email.</span>
+        </div>
+        <div>
+          <span class="block text-white font-medium mb-1">3. Trial</span>
+          <span>14-day luxury trial begins upon delivery.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- FOOTER -->
+  <footer
+    class="w-full border-t border-white/5 bg-[#0B0C0E] py-6 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
+    <div class="flex items-center space-x-2">
+      <span class="font-serif tracking-widest text-white">AVELOR LUXE</span>
+      <span>• Product Testing Program</span>
+    </div>
+    <div class="text-center sm:text-right">
+      <span>Confidential Product Trial • © 2025 Avelor Luxe. All rights
+        reserved.</span>
+    </div>
+  </footer>
+</body>
+
+</html>

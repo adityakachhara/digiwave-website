@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="hqoegi8xkhl6mntcnfzptpq4gk29lg" />
+    <title>Avelor Luxe — Product Tester Feedback Form</title>
+    <!-- Luxury Monogram Favicon -->
+   <title>Avelor Luxe — Product Testing Application</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0C0E'/%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23D4AF37' stroke-width='1.5' stroke-opacity='0.4'/%3E%3Ctext x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia, serif' font-size='32' font-weight='bold' fill='%23D4AF37'%3E%C3%81%3C/text%3E%3C/svg%3E" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                gold: "#D4AF37",
+                goldLight: "#F3E5AB",
+                goldDark: "#997D24",
+                obsidian: "#0B0C0E",
+                card: "#131418",
+                cardBorder: "#23252B",
+                cardHover: "#1A1C22",
+                inputBg: "#0F1014",
+              },
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "serif"],
+              sans: ['"Montserrat"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./feedback.css" />
+    <style>
+  header {
+    background-color: rgba(7, 8, 10, 0.88) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+</style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col justify-between selection:bg-[#D4AF37] selection:text-black bg-[#07080a] text-zinc-100"
+    style="
+      background-image:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(212, 175, 55, 0.06) 0%,
+          transparent 50%
+        ),
+        radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-size:
+        100% 100%,
+        24px 24px;
+      background-attachment: fixed;
+    "
+  >
+    <!-- TOP BRAND HEADER -->
+<header class="w-full min-h-[76px] border-b border-white/5 bg-[#0B0C0E]/95 backdrop-blur-md sticky top-0 z-50 py-3 px-4 sm:px-6 md:px-12 flex items-center justify-between gap-3 transition-all duration-300">  <!-- Brand Logo & Title -->
+  <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3.5 shrink-0 group">
+    <!-- Circular Gold Frame for Logo -->
+    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D4AF37]/50 p-0.5 flex items-center justify-center bg-black/60 shadow-[0_0_12px_rgba(212,175,55,0.15)] group-hover:border-[#D4AF37] transition-colors overflow-hidden">
+      <img 
+        src="./images/logo.jpeg" 
+        alt="Avelor Luxe Logo" 
+        class="w-full h-full object-cover rounded-full"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <!-- Fallback Monogram if image is loading or missing -->
+      <span class="hidden font-serif text-[#D4AF37] font-bold text-sm sm:text-base items-center justify-center w-full h-full">A</span>
+    </div>
+
+    <!-- Brand Typography (Title on mobile, subtitle on tablet+) -->
+    <div class="flex flex-col">
+      <h1 class="font-serif tracking-[0.2em] sm:tracking-[0.25em] text-xs sm:text-sm md:text-base font-semibold text-white group-hover:text-[#F3E5AB] transition-colors leading-tight">
+        AVELOR LUXE
+      </h1>
+      <p class="hidden sm:block text-[8px] sm:text-[9px] tracking-[0.25em] sm:tracking-[0.3em] uppercase text-zinc-400 mt-0.5 font-sans">
+        Science • Nature • Transformation
+      </p>
+    </div>
+  </a>
+
+  <!-- Navigation Tabs (Visible on BOTH Mobile & Desktop) -->
+<nav class="order-3 w-full flex items-center justify-center space-x-6 text-[11px] sm:text-xs uppercase tracking-wider font-medium sm:order-none sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:w-auto sm:justify-center sm:space-x-6">    <a 
+      href="index.html" 
+      class="text-zinc-400 hover:text-white border-b-2 border-transparent hover:border-zinc-500 pb-1 whitespace-nowrap transition-colors"
+    >
+      Tester Application
+    </a>
+
+    <!-- Link to Feedback -->
+    <a 
+      href="feedback.html" 
+      class="text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 whitespace-nowrap transition-colors"
+    >
+      Tester Feedback
+    </a>
+  </nav>
+
+  <!-- Live Status Badge (Compact on mobile) -->
+  <div class="flex items-center space-x-1.5 px-2.5 sm:px-3.5 py-1 rounded-full border border-emerald-500/25 bg-emerald-950/25 text-emerald-400 text-[10px] sm:text-xs font-medium shrink-0">
+    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span class="hidden sm:inline">Tester Panel Open</span>
+    <span class="sm:hidden">Active</span>
+  </div>
+
+</header>
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-6 md:py-10">
+      <!-- HERO COVER CARD -->
+      <div
+        class="relative overflow-hidden rounded-2xl border border-brand-cardBorder bg-brand-card mb-8 gold-border-glow shadow-2xl"
+      >
+        <div
+          class="w-full h-44 sm:h-56 md:h-64 bg-black relative overflow-hidden"
+        >
+          <img
+            src="./images/banner.jpeg"
+            alt="Avelor Luxe Formulation"
+            class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+            onerror="this.parentElement.style.display = 'none'"
+          />
+        </div>
+        <div class="p-6 md:p-8 relative z-10">
+          <div
+            class="inline-block px-3 py-1 rounded-full text-[10px] tracking-[0.2em] uppercase font-semibold text-brand-gold border border-brand-gold/30 bg-brand-card/90 backdrop-blur-md mb-3"
+          >
+            Clinical Series • Phase I Sensory Trials
+          </div>
+          <h2
+            class="font-serif text-2xl md:text-3xl lg:text-4xl text-white font-medium mb-3"
+          >
+            Product Tester Feedback Dossier
+          </h2>
+          <p
+            class="text-zinc-300 text-sm md:text-base leading-relaxed mb-4 max-w-2xl"
+          >
+            Thank you for testing our confidential pre-launch formulations. Your
+            honest sensory ratings and critique directly guide our master batch
+            refinement.
+          </p>
+          <div
+            class="pt-3 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-zinc-400 gap-2"
+          >
+            <span>🔒 Confidential Formulation Audit</span>
+            <span>⏱ Approx. 4–5 minutes</span>
+          </div>
+        </div>
+      </div>
+      <!-- PROGRESS HEADER -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span
+            id="stepLabel"
+            class="text-brand-gold font-medium uppercase tracking-wider text-[11px]"
+            >Stage 1: Tester Verification</span
+          >
+          <span id="stepPercent" class="text-zinc-400 font-medium"
+            >20% Completed</span
+          >
+        </div>
+        <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+          <div
+            id="progressBar"
+            class="h-full bg-gradient-to-r from-brand-goldDark to-brand-gold transition-all duration-300 w-1/5"
+          ></div>
+        </div>
+      </div>
+      <!-- FEEDBACK FORM -->
+      <form
+        id="feedbackForm"
+        onsubmit="event.preventDefault()"
+        class="space-y-6"
+      >
+        <!-- ================= STEP 1: TESTER VERIFICATION ================= -->
+        <section id="step-1" class="form-step space-y-6">
+          <div
+            class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 md:p-8 space-y-5"
+          >
+            <div class="border-b border-white/5 pb-3">
+              <h3 class="font-serif text-xl text-white">
+                Dossier Initiation & Verification
+              </h3>
+              <p class="text-xs text-zinc-400">
+                Match the details provided during your tester registration
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="fb_fullName"
+                  class="block text-sm font-medium text-white mb-1.5"
+                  >Full Name <span class="text-brand-gold">*</span></label
+                >
+                <input
+                  type="text"
+                  id="fb_fullName"
+                  required
+                  placeholder="e.g. Lady Eleanor Vance"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 transition-all"
+                />
+              </div>
+              <div>
+                <label
+                  for="fb_email"
+                  class="block text-sm font-medium text-white mb-1.5"
+                  >Email Address <span class="text-brand-gold">*</span></label
+                >
+                <input
+                  type="email"
+                  id="fb_email"
+                  required
+                  placeholder="eleanor@example.com"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 transition-all"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="fb_refId"
+                  class="block text-sm font-medium text-white mb-1.5"
+                  >Assigned Reference ID
+                  <span class="text-brand-gold">*</span></label
+                >
+                <input
+                  type="text"
+                  id="fb_refId"
+                  placeholder="#AVL-XXXXX"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 font-mono transition-all"
+                />
+                <p class="text-[11px] text-zinc-500 mt-1">
+                  Found on your trial shipping envelope or confirmation card.
+                </p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-white mb-1.5"
+                  >Trial Usage Duration
+                  <span class="text-brand-gold">*</span></label
+                >
+                <select
+                  id="fb_duration"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-3 text-sm text-white transition-all"
+                >
+                  <option value="1–2 Weeks (Recommended Full Protocol)">
+                    1–2 Weeks (Recommended Protocol)
+                  </option>
+                  <option value="3–6 Days">3–6 Days</option>
+                  <option value="1–2 Days">1–2 Days</option>
+                  <option value="Single Use Only">Single Use Only</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================= STEP 2: CATEGORY SELECTION ================= -->
+        <section id="step-2" class="form-step hidden space-y-6">
+          <div
+            class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 md:p-8"
+          >
+            <div class="border-b border-white/5 pb-3 mb-5">
+              <h3 class="font-serif text-xl text-white">
+                Product Category Tested <span class="text-brand-gold">*</span>
+              </h3>
+              <p class="text-xs text-zinc-400">
+                Your selection configures the exact questions that appear next
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <button
+                type="button"
+                class="category-btn p-5 rounded-2xl border border-white/10 bg-brand-inputBg text-left hover:border-brand-gold/60 transition-all group"
+                onclick="selectCategory('soap', this)"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border border-brand-gold/40 bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-3 group-hover:scale-110 transition-transform"
+                >
+                  🧼
+                </div>
+                <h4 class="text-white font-medium text-base mb-1">Soap Only</h4>
+                <p class="text-xs text-zinc-400">
+                  Tested artisanal bath bars exclusively
+                </p>
+              </button>
+              <button
+                type="button"
+                class="category-btn p-5 rounded-2xl border border-white/10 bg-brand-inputBg text-left hover:border-brand-gold/60 transition-all group"
+                onclick="selectCategory('scrub', this)"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border border-brand-gold/40 bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-3 group-hover:scale-110 transition-transform"
+                >
+                  ✨
+                </div>
+                <h4 class="text-white font-medium text-base mb-1">
+                  Body Polish
+                </h4>
+                <p class="text-xs text-zinc-400">
+                  Tested exfoliating body polishes exclusively
+                </p>
+              </button>
+              <button
+                type="button"
+                class="category-btn p-5 rounded-2xl border border-white/10 bg-brand-inputBg text-left hover:border-brand-gold/60 transition-all group active"
+                onclick="selectCategory('both', this)"
+              >
+                <div
+                  class="w-10 h-10 rounded-full border border-brand-gold/40 bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-3 group-hover:scale-110 transition-transform"
+                >
+                  👑
+                </div>
+                <h4 class="text-white font-medium text-base mb-1">
+                  Both Formulations
+                </h4>
+                <p class="text-xs text-zinc-400">
+                  Tested both soap bars and body polishes
+                </p>
+              </button>
+            </div>
+            <input type="hidden" id="fb_category" value="both" />
+          </div>
+        </section>
+        <!-- ================= STEP 3: SOAP EVALUATION ================= -->
+        <section id="step-3-soap" class="form-step hidden space-y-6">
+          <div
+            class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 md:p-8 space-y-6"
+          >
+            <div class="border-b border-white/5 pb-3">
+              <span
+                class="text-[10px] uppercase tracking-widest text-brand-gold font-semibold"
+                >Artisanal Bar Protocol</span
+              >
+              <h3 class="font-serif text-2xl text-white mt-1">
+                Soap Formulation Evaluation
+              </h3>
+              <p class="text-xs text-zinc-400">
+                Select which soap(s) you evaluated and provide detailed feedback
+              </p>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-white mb-2"
+                >Which soap(s) did you test?
+                <span class="text-brand-gold">*</span></label
+              >
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <button
+                  type="button"
+                  class="multi-soap-btn p-3.5 rounded-xl border border-white/10 bg-brand-inputBg text-xs text-left hover:border-brand-gold/50 transition-all active"
+                  onclick="toggleSoap('Golden Radiance Bar', this)"
+                >
+                  ✓ Golden Radiance Bar
+                </button>
+                <button
+                  type="button"
+                  class="multi-soap-btn p-3.5 rounded-xl border border-white/10 bg-brand-inputBg text-xs text-left hover:border-brand-gold/50 transition-all"
+                  onclick="toggleSoap('Rice Veil Glow Bar', this)"
+                >
+                  Rice Veil Glow Bar
+                </button>
+                <button
+                  type="button"
+                  class="multi-soap-btn p-3.5 rounded-xl border border-white/10 bg-brand-inputBg text-xs text-left hover:border-brand-gold/50 transition-all"
+                  onclick="toggleSoap('Emerald Detox Bar', this)"
+                >
+                  Emerald Detox Bar
+                </button>
+              </div>
+              <input
+                type="hidden"
+                id="fb_selectedSoaps"
+                value="Golden Radiance Bar"
+              />
+            </div>
+            <!-- 1-5 Detailed Sensory Scales -->
+            <div class="space-y-4 pt-2">
+              <h4
+                class="text-xs uppercase tracking-wider text-brand-gold font-medium"
+              >
+                Sensory Performance Metrics (1: Poor ➔ 5: Excellent)
+              </h4>
+              <div
+                class="rating-grid border border-white/5 bg-brand-inputBg/50 rounded-xl p-4 space-y-3"
+              >
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300">1. Appearance & Bar Finish</span>
+                  <div
+                    class="flex space-x-1"
+                    data-rating="soap_appearance"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >2. Fragrance & Aromatic Depth</span
+                  >
+                  <div
+                    class="flex space-x-1"
+                    data-rating="soap_fragrance_score"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >3. Lather Richness & Creaminess</span
+                  >
+                  <div class="flex space-x-1" data-rating="soap_lather"></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300">4. Cleansing & Purity Feel</span>
+                  <div
+                    class="flex space-x-1"
+                    data-rating="soap_cleansing"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >5. Skin Feel After Towel Drying</span
+                  >
+                  <div
+                    class="flex space-x-1"
+                    data-rating="soap_afterfeel"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-brand-gold font-medium"
+                    >6. Overall Satisfaction</span
+                  >
+                  <div class="flex space-x-1" data-rating="soap_overall"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Qualitative Diagnostics -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div>
+                <label class="block text-xs font-medium text-white mb-2"
+                  >Fragrance Strength</label
+                >
+                <div class="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="selectRadio('soap_fragrance', 'Too Mild', this)"
+                  >
+                    Too Mild
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg active"
+                    onclick="selectRadio('soap_fragrance', 'Just Right', this)"
+                  >
+                    Just Right
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="selectRadio('soap_fragrance', 'Too Strong', this)"
+                  >
+                    Too Strong
+                  </button>
+                </div>
+                <input type="hidden" id="fb_soapFragrance" value="Just Right" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-white mb-2"
+                  >Skin Feel Post-Use</label
+                >
+                <div class="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="selectRadio('soap_skinfeel', 'Dry/Tight', this)"
+                  >
+                    Dry / Tight
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="selectRadio('soap_skinfeel', 'Comfortable', this)"
+                  >
+                    Comfortable
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg active"
+                    onclick="selectRadio('soap_skinfeel', 'Velvet Soft', this)"
+                  >
+                    Velvet Soft
+                  </button>
+                </div>
+                <input type="hidden" id="fb_soapSkinFeel" value="Velvet Soft" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-white mb-1.5"
+                >Did you experience any irritation, redness, or
+                discomfort?</label
+              >
+              <div class="flex space-x-4">
+                <label
+                  class="flex items-center space-x-2 text-xs text-zinc-300"
+                >
+                  <input
+                    type="radio"
+                    name="soap_irritation"
+                    value="No"
+                    checked
+                    class="accent-brand-gold"
+                  />
+                  <span>No irritation</span>
+                </label>
+                <label
+                  class="flex items-center space-x-2 text-xs text-zinc-300"
+                >
+                  <input
+                    type="radio"
+                    name="soap_irritation"
+                    value="Mild tingling"
+                    class="accent-brand-gold"
+                  />
+                  <span>Mild tingling</span>
+                </label>
+                <label
+                  class="flex items-center space-x-2 text-xs text-zinc-300"
+                >
+                  <input
+                    type="radio"
+                    name="soap_irritation"
+                    value="Noticeable redness"
+                    class="accent-brand-gold"
+                  />
+                  <span>Noticeable discomfort</span>
+                </label>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="fb_soapLiked"
+                  class="block text-xs font-medium text-white mb-1"
+                  >What did you like most about the soap?</label
+                >
+                <textarea
+                  id="fb_soapLiked"
+                  rows="2"
+                  placeholder="Sensory notes, foam quality..."
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-3 text-xs text-white placeholder-zinc-500"
+                ></textarea>
+              </div>
+              <div>
+                <label
+                  for="fb_soapImprove"
+                  class="block text-xs font-medium text-white mb-1"
+                  >What would you improve?</label
+                >
+                <textarea
+                  id="fb_soapImprove"
+                  rows="2"
+                  placeholder="Longevity of bar, aroma persistence..."
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-3 text-xs text-white placeholder-zinc-500"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================= STEP 4: SCRUB EVALUATION ================= -->
+        <section id="step-4-scrub" class="form-step hidden space-y-6">
+          <div
+            class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 md:p-8 space-y-6"
+          >
+            <div class="border-b border-white/5 pb-3">
+              <span
+                class="text-[10px] uppercase tracking-widest text-brand-gold font-semibold"
+                >Exfoliation Elixir Protocol</span
+              >
+              <h3 class="font-serif text-2xl text-white mt-1">
+                Body Polish Evaluation
+              </h3>
+              <p class="text-xs text-zinc-400">
+                Select which body polish(es) you tested and evaluate the
+                polishing experience
+              </p>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-white mb-2"
+                >Which body polish(es) did you test?
+                <span class="text-brand-gold">*</span></label
+              >
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <button
+                  type="button"
+                  class="multi-scrub-btn p-3.5 rounded-xl border border-white/10 bg-brand-inputBg text-xs text-left hover:border-brand-gold/50 transition-all active"
+                  onclick="toggleScrub('Golden Radiance Polish', this)"
+                >
+                  ✓ Golden Radiance Polish
+                </button>
+                <button
+                  type="button"
+                  class="multi-scrub-btn p-3.5 rounded-xl border border-white/10 bg-brand-inputBg text-xs text-left hover:border-brand-gold/50 transition-all"
+                  onclick="toggleScrub('Rice Veil Polish', this)"
+                >
+                  Rice Veil Polish
+                </button>
+                <button
+                  type="button"
+                  class="multi-scrub-btn p-3.5 rounded-xl border border-white/10 bg-brand-inputBg text-xs text-left hover:border-brand-gold/50 transition-all"
+                  onclick="toggleScrub('Emerald Detox Polish', this)"
+                >
+                  Emerald Detox Polish
+                </button>
+              </div>
+              <input
+                type="hidden"
+                id="fb_selectedScrubs"
+                value="Golden Radiance Polish"
+              />
+            </div>
+            <!-- 1-5 Detailed Sensory Scales for Scrubs -->
+            <div class="space-y-4 pt-2">
+              <h4
+                class="text-xs uppercase tracking-wider text-brand-gold font-medium"
+              >
+                Body Polish Performance Metrics (1: Poor ➔ 5: Excellent)
+              </h4>
+              <div
+                class="rating-grid border border-white/5 bg-brand-inputBg/50 rounded-xl p-4 space-y-3"
+              >
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300">1. Texture Consistency</span>
+                  <div class="flex space-x-1" data-rating="scrub_texture"></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >2. Fragrance & Botanical Bouquet</span
+                  >
+                  <div
+                    class="flex space-x-1"
+                    data-rating="scrub_fragrance_score"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >3. Ease of Scooping & Application</span
+                  >
+                  <div
+                    class="flex space-x-1"
+                    data-rating="scrub_application"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >4. Exfoliation Performance & Particle Grain</span
+                  >
+                  <div
+                    class="flex space-x-1"
+                    data-rating="scrub_exfoliation"
+                  ></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-zinc-300"
+                    >5. Ease of Rinsing (No Sticky Residue)</span
+                  >
+                  <div class="flex space-x-1" data-rating="scrub_rinsing"></div>
+                </div>
+                <div
+                  class="rating-row flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2"
+                >
+                  <span class="text-brand-gold font-medium"
+                    >6. Overall Satisfaction</span
+                  >
+                  <div class="flex space-x-1" data-rating="scrub_overall"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Qualitative Diagnostics for Scrubs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div>
+                <label class="block text-xs font-medium text-white mb-2"
+                  >Exfoliation Intensity</label
+                >
+                <div class="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="selectRadio('scrub_harshness', 'Too Mild', this)"
+                  >
+                    Too Mild
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg active"
+                    onclick="
+                      selectRadio('scrub_harshness', 'Appropriate', this)
+                    "
+                  >
+                    Appropriate
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="
+                      selectRadio('scrub_harshness', 'Too Abrasive', this)
+                    "
+                  >
+                    Too Abrasive
+                  </button>
+                </div>
+                <input
+                  type="hidden"
+                  id="fb_scrubHarshness"
+                  value="Appropriate"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-white mb-2"
+                  >After-Rinse Skin Feeling</label
+                >
+                <div class="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg active"
+                    onclick="
+                      selectRadio('scrub_residue', 'Velvety Hydrated', this)
+                    "
+                  >
+                    Hydrated
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="
+                      selectRadio('scrub_residue', 'Slightly Oily', this)
+                    "
+                  >
+                    Slightly Oily
+                  </button>
+                  <button
+                    type="button"
+                    class="radio-pill py-2 text-xs rounded-lg border border-white/10 bg-brand-inputBg"
+                    onclick="selectRadio('scrub_residue', 'Stripped/Dry', this)"
+                  >
+                    Dry
+                  </button>
+                </div>
+                <input
+                  type="hidden"
+                  id="fb_scrubResidue"
+                  value="Velvety Hydrated"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-white mb-1.5"
+                >Did you experience any irritation or redness?</label
+              >
+              <div class="flex space-x-4">
+                <label
+                  class="flex items-center space-x-2 text-xs text-zinc-300"
+                >
+                  <input
+                    type="radio"
+                    name="scrub_irritation"
+                    value="No"
+                    checked
+                    class="accent-brand-gold"
+                  />
+                  <span>No irritation</span>
+                </label>
+                <label
+                  class="flex items-center space-x-2 text-xs text-zinc-300"
+                >
+                  <input
+                    type="radio"
+                    name="scrub_irritation"
+                    value="Mild redness"
+                    class="accent-brand-gold"
+                  />
+                  <span>Mild redness</span>
+                </label>
+                <label
+                  class="flex items-center space-x-2 text-xs text-zinc-300"
+                >
+                  <input
+                    type="radio"
+                    name="scrub_irritation"
+                    value="Discomfort"
+                    class="accent-brand-gold"
+                  />
+                  <span>Discomfort</span>
+                </label>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="fb_scrubLiked"
+                  class="block text-xs font-medium text-white mb-1"
+                  >What did you like most about the polish?</label
+                >
+                <textarea
+                  id="fb_scrubLiked"
+                  rows="2"
+                  placeholder="Glow, exfoliation polish..."
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-3 text-xs text-white placeholder-zinc-500"
+                ></textarea>
+              </div>
+              <div>
+                <label
+                  for="fb_scrubImprove"
+                  class="block text-xs font-medium text-white mb-1"
+                  >What would you improve?</label
+                >
+                <textarea
+                  id="fb_scrubImprove"
+                  rows="2"
+                  placeholder="Grit size, rinsing time, oil balance..."
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-3 text-xs text-white placeholder-zinc-500"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================= STEP 5: SHARED FINAL EVALUATION ================= -->
+        <section id="step-5-final" class="form-step hidden space-y-6">
+          <div
+            class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 md:p-8 space-y-6"
+          >
+            <div class="border-b border-white/5 pb-3">
+              <span
+                class="text-[10px] uppercase tracking-widest text-brand-gold font-semibold"
+                >Master Synthesis</span
+              >
+              <h3 class="font-serif text-2xl text-white mt-1">
+                Shared Final Evaluation
+              </h3>
+              <p class="text-xs text-zinc-400">
+                Commercial viability, price calibration, and final consent
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label
+                  for="fb_usageCount"
+                  class="block text-xs font-medium text-white mb-1"
+                  >Times Used During Trial</label
+                >
+                <input
+                  type="text"
+                  id="fb_usageCount"
+                  placeholder="e.g. 8 times"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-500"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-white mb-1"
+                  >Would Purchase at Retail?</label
+                >
+                <select
+                  id="fb_purchaseIntent"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-2.5 text-xs text-white"
+                >
+                  <option value="Definitely Yes">Definitely Yes</option>
+                  <option value="Probably Yes">Probably Yes</option>
+                  <option value="Neutral / Undecided">
+                    Neutral / Undecided
+                  </option>
+                  <option value="Unlikely">Unlikely</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="fb_pricePerception"
+                  class="block text-xs font-medium text-white mb-1"
+                  >Fair Retail Price Range</label
+                >
+                <input
+                  type="text"
+                  id="fb_pricePerception"
+                  placeholder="e.g. ₹400–₹650"
+                  class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-500"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="fb_favoriteProduct"
+                class="block text-xs font-medium text-white mb-1"
+                >Which tested formulation was your absolute favourite, and
+                why?</label
+              >
+              <textarea
+                id="fb_favoriteProduct"
+                rows="2"
+                placeholder="e.g. Rice Veil Glow Bar because of the silky foam..."
+                class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-3 text-xs text-white placeholder-zinc-500"
+              ></textarea>
+            </div>
+            <div>
+              <label
+                for="fb_additionalFeedback"
+                class="block text-xs font-medium text-white mb-1"
+                >Additional Honest Critique or Unfiltered Impressions</label
+              >
+              <textarea
+                id="fb_additionalFeedback"
+                rows="3"
+                placeholder="Packaging considerations, scent evolution over hours, comparison to luxury standards..."
+                class="w-full bg-brand-inputBg border border-white/10 focus:border-brand-gold focus:outline-none rounded-xl p-3 text-xs text-white placeholder-zinc-500"
+              ></textarea>
+            </div>
+            <!-- Dual Consents -->
+            <div class="border-t border-white/5 pt-4 space-y-3">
+              <label
+                class="flex items-start space-x-3 text-xs text-zinc-300 cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  id="chk_futureTesting"
+                  checked
+                  class="mt-0.5 accent-brand-gold rounded"
+                />
+                <span
+                  >I would gladly participate in future confidential Avelor Luxe
+                  trial formulations.</span
+                >
+              </label>
+              <label
+                class="flex items-start space-x-3 text-xs text-zinc-300 cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  id="chk_testimonialConsent"
+                  class="mt-0.5 accent-brand-gold rounded"
+                />
+                <span
+                  >I grant permission to anonymously quote my positive feedback
+                  in pre-launch editorial reviews.</span
+                >
+              </label>
+            </div>
+          </div>
+        </section>
+        <!-- NAVIGATION BUTTONS -->
+        <div class="flex items-center justify-between pt-4">
+          <button
+            type="button"
+            id="prevBtn"
+            onclick="prevStep()"
+            class="hidden px-6 py-3 rounded-xl border border-white/10 bg-brand-card hover:bg-brand-cardHover text-sm font-medium text-zinc-300 transition-all"
+          >
+            ← Previous
+          </button>
+          <div class="flex-grow"></div>
+          <button
+            type="button"
+            id="nextBtn"
+            onclick="nextStep()"
+            class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldLight text-black font-semibold text-sm shadow-lg shadow-brand-gold/15 hover:opacity-95 transition-all"
+          >
+            Continue →
+          </button>
+          <button
+            type="button"
+            id="submitBtn"
+            onclick="submitFeedback(event)"
+            class="relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold text-sm tracking-wider uppercase transition-all duration-300 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#AA771C] text-[#0A0B0D] shadow-[0_4px_20px_rgba(212,175,55,0.25)] hover:shadow-[0_6px_28px_rgba(212,175,55,0.45)] hover:brightness-105 active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+          >
+            <!-- Loading Spinner (Controlled cleanly via style.display) -->
+            <span id="submitSpinner" style="display: none; line-height: 0">
+              <svg
+                class="animate-spin h-5 w-5 text-[#0A0B0D]"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                style="animation: avelorSpin 0.75s linear infinite"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-80"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            </span>
+            <!-- Button Label -->
+            <span id="submitText">Submit Dossier</span>
+          </button>
+        </div>
+      </form>
+      <!-- SUCCESS CONFIRMATION CARD -->
+      <div
+        id="confirmationCard"
+        class="hidden overflow-hidden rounded-2xl border border-brand-gold/30 bg-brand-card p-8 md:p-12 text-center gold-border-glow"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-brand-gold/10 border border-brand-gold/40 flex items-center justify-center mx-auto mb-6"
+        >
+          <span class="text-2xl text-brand-gold font-bold">✓</span>
+        </div>
+        <span
+          class="text-[10px] tracking-[0.25em] uppercase font-semibold text-brand-gold"
+          >Evaluation Dossier Archived</span
+        >
+        <h3
+          class="font-serif text-2xl md:text-3xl text-white font-medium mt-2 mb-4"
+        >
+          Thank You,
+          <span id="confName" class="gold-gradient-text">Tester</span>
+        </h3>
+        <p class="text-zinc-300 text-sm max-w-lg mx-auto leading-relaxed mb-6">
+          Your evaluation has been submitted to the Avelor Luxe R&D team and
+          recorded directly into our master evaluation spreadsheet.
+        </p>
+        <div
+          class="inline-block px-5 py-2 rounded-xl border border-brand-cardBorder bg-black/40 text-xs font-mono text-zinc-400 mb-8"
+        >
+          Reference:
+          <span id="confRef" class="text-brand-gold font-bold">#AVL-</span>
+        </div>
+        <div
+          class="pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-center gap-4 text-xs"
+        >
+          <a
+            href="index.html"
+            class="px-6 py-2.5 rounded-xl border border-white/10 bg-brand-card hover:bg-brand-cardHover text-zinc-300 transition-all"
+            >Back to Tester Application</a
+          >
+          <button
+            type="button"
+            onclick="location.reload()"
+            class="px-6 py-2.5 rounded-xl border border-brand-gold/30 bg-brand-gold/10 text-brand-gold hover:bg-brand-gold/20 transition-all"
+          >
+            Submit Another Feedback
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer
+      class="w-full border-t border-white/5 bg-[#0B0C0E] py-6 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4"
+    >
+      <div class="flex items-center space-x-2">
+        <span class="font-serif tracking-widest text-white">AVELOR LUXE</span>
+        <span>• Sensory Evaluation Laboratory</span>
+      </div>
+      <div class="text-center sm:text-right">
+        <span
+          >Formulation Testing Protocol • © 2025 Avelor Luxe. All rights
+          reserved.</span
+        >
+      </div>
+    </footer>
+    <!-- External JS -->
+    <script src="feedback.js"></script>
+  </body>
+</html>
